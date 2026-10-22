@@ -10,7 +10,7 @@ Updated 2026-10-22. Switchback Foundry is a public, standalone project; the play
 - `docs/DEVELOPMENT.md`: full rules, interaction behavior, solution properties, and prior browser verification.
 - `.github/workflows/check.yml`: model and syntax checks; no deployment.
 
-The source was extracted from the homepage release `2e1616dba8ffaee2f39c3c9c8766370a30530af7`, using the current homepage tree at `b800c31`. The model, app, puzzle CSS, base CSS, theme logic, and favicon were preserved byte-for-byte. Puzzle data is unchanged; its verification-command comment now points to `npm test`. HTML asset/navigation paths and the source link changed. The independent checker changed its import paths only.
+The source was extracted from the homepage release `2e1616dba8ffaee2f39c3c9c8766370a30530af7`, using the current homepage tree at `b800c31`. The model, app, puzzle CSS, theme logic, and favicon were preserved byte-for-byte. The copied base stylesheet omits unused homepage mascot rules, so it has no missing image references. Puzzle data is unchanged; its verification-command comment now points to `npm test`. HTML asset/navigation paths and the source link changed. The independent checker changed its import paths only.
 
 ## Current design
 
