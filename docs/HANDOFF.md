@@ -2,6 +2,16 @@
 
 Updated 2026-10-22. Switchback Foundry is a public, standalone project; the playable copy remains at https://kevinmneal.com/lab/switchback/.
 
+## Mobile layout correction
+
+The mobile layout corrects a reported iPhone board overlap. At a 393 × 852 viewport, the former fixed control panel covered about 24 pixels of the board initially and 129 pixels with hints open. The controls now follow the maze and legend in normal document flow, with expanded help/results below them. Supplementary board instructions follow the play area on narrow screens and retain their left-column position on desktop.
+
+The mobile header is more compact, small controls have larger tap targets, and a short landscape view uses a smaller board. Removed the fixed-dock height observer and automatic scrolling after ordinary moves/manual walkthrough steps. Explicit navigation back to play can still bring the board into view. Independent review identified the risk of repeatedly scrolling controls out of view on very short screens; a 393 × 375 check confirmed consecutive taps preserve scroll position after that was corrected.
+
+Browser checks covered 393 × 852, 393 × 659 (less room for browser bars), 320 × 568, 393 × 375, 852 × 393 landscape, and desktop. Expanded hints, a full walkthrough, saved-run restoration, an 11-move win, prediction gating, floor play, result checking, and return to the original board worked. No board/control overlap or horizontal overflow was seen. Existing puzzle/model and syntax checks pass. Physical iPhone/Safari testing is still outstanding.
+
+The maze and model are unchanged. The stylesheet and application URLs carry a new cache version so reloading the hosted page picks up this layout.
+
 ## Working layout
 
 - `dist/`: complete static runtime, including local base styles, theme control, and favicon.

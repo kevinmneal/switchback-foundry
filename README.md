@@ -40,7 +40,7 @@ npm test
 npm run check
 ```
 
-The independent checker covers 600 restart states and 1,200 transitions, shortest-route counting, repeated switch entry, and the puzzle's return and route-choice properties. These checks establish the rules and structure, not human difficulty or enjoyment. Desktop and narrow browser layouts have been inspected; physical-device and spoken screen-reader testing remain outstanding.
+The independent checker covers 600 restart states and 1,200 transitions, shortest-route counting, repeated switch entry, and the puzzle's return and route-choice properties. These checks establish the rules and structure, not human difficulty or enjoyment. Desktop, portrait, short-screen, and landscape browser layouts have been inspected; physical-device and spoken screen-reader testing remain outstanding.
 
 To make one portable HTML file:
 

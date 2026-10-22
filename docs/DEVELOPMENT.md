@@ -17,7 +17,7 @@ Click or Tab to the maze for F / Up to move forward, T / Space to turn and step,
 - **Prediction:** Explore the switch is an optional disclosure. Choose whether a route would remain if E3 became ordinary floor. Try with floor changes the board and starts a fresh run without disclosing the answer. Check my prediction explicitly reveals the result without changing the current run. The checked prediction is retained; returning to the original maze preserves the session's best route.
 - **Explanation:** A closer look at the way home appears after a personal success or a requested prediction check. Solver counts are kept behind the experiment's How was this checked? disclosure.
 
-Hints, progress, and predictions last only for the current page session. Reloading starts fresh. Movement, hints, and requested results use one persistent live announcement. Narrow screens dock the controls; short screens use normal page flow. Responsive browser checks are not a physical-device or spoken screen-reader audit.
+Hints, progress, and predictions last only for the current page session. Reloading starts fresh. Movement, hints, and requested results use one persistent live announcement. On narrow screens, movement controls follow the maze in normal page flow. Hints and results expand below them, and board notes follow the play area. Ordinary moves and walkthrough steps do not force the page to scroll. Short landscape screens keep a smaller board beside the controls. Responsive browser checks are not a physical-device or spoken screen-reader audit.
 
 ## Rules
 
@@ -52,7 +52,7 @@ git diff --check
 
 The model check uses an independent direction-vector transition oracle and action-word layer enumeration. It checks 600 possible restart states and 1,200 transitions over the original board, edited board, and shortest-count fixtures; separate checks cover repeated switch entry, terminal behavior, witness replay, no-position-repeat exhaustion, edit isolation, and the route-choice properties. GitHub Actions runs the model and syntax checks. The homepage separately verifies its committed snapshot.
 
-The discovery pass was also exercised in a browser: staged hints, saved-run restoration, a full walkthrough that does not award a win, first finishes in 13 and 11 moves, both challenge paths, prediction-first gating, trying the floor variant before checking, and checking without resetting the run. Desktop and narrow layouts were visually inspected.
+The discovery pass was also exercised in a browser: staged hints, saved-run restoration, a full walkthrough that does not award a win, first finishes in 13 and 11 moves, both challenge paths, prediction-first gating, trying the floor variant before checking, and checking without resetting the run. Desktop and narrow layouts were visually inspected. The mobile correction was checked at 393 × 852, 393 × 659, 320 × 568, and 393 × 375, plus 852 × 393 landscape and a 1280 × 1000 desktop. Checks covered expanded hints, walkthrough and saved-run restoration, a full win, the prediction experiment, and stable control positions across taps on a short screen. This is browser viewport testing, not physical iPhone/Safari testing.
 
 ## Local preview and portable export
 
