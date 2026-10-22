@@ -1,0 +1,11 @@
+{
+  "name": "switchback-foundry",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A small maze about how your way back can change.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node tests/check-model.mjs",
+    "check": "node --check dist/app.mjs && node --check dist/model.mjs && node --check dist/puzzle.mjs && node --check dist/theme.mjs && node --check tests/check-model.mjs"
+  }
+}
